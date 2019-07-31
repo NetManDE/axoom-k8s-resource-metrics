@@ -8,8 +8,8 @@ We recommend deploying this using the [Kubernetes Resource Metrics Helm Chart](h
 
 You can also configure it manually by setting the following environment variables:
 
-| Name              | Default            | Description                                                                   |
-|-------------------|--------------------|-------------------------------------------------------------------------------|
-| `RESOURCE_TYPE`   | `pods`             | The plural name of the Kubernetes resource to monitor (e.g. `deployments`).   |
-| `FILTER_ARGS`     | `--all-namespaces` | kubectl arguments for filtering Kubernetes resources (e.g. `-n mynamepsace`). |
-| `STATUS_JSONPATH` | `.status.phase`    | The JSON Path expression for retrieving the status of a resource.             |
+| Name            | Default            | Description                                                                      |
+|-----------------|--------------------|----------------------------------------------------------------------------------|
+| `RESOURCE_TYPE` | `pods`             | The plural name of the Kubernetes resource to monitor (e.g. `serviceinstances`). |
+| `STATUS_COLUMN` | `4`                | The `kubectl get` column that contains status of the resource (e.g. `5`).        |
+| `FILTER_ARGS`   | `--all-namespaces` | kubectl arguments for filtering Kubernetes resources (e.g. `-n mynamepsace`).    |
